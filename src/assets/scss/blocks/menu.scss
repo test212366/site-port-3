@@ -1,0 +1,73 @@
+.wrap-menu {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 10;
+}
+
+.menu {
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+
+.menu__item {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	text-decoration: none;
+	font-size: 1.3rem;
+	color: rgb(255, 255, 255);
+	background-color: rgb(151, 150, 150);
+	transition: 0.3s;
+	outline: none;
+}
+.menu__close {
+	-webkit-box-shadow: 0px 0px 26px 5px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 0px 0px 26px 5px rgba(34, 60, 80, 0.2);
+	box-shadow: 0px 0px 26px 5px rgba(34, 60, 80, 0.2);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80px;
+	height: 80px;
+	outline: none;
+	background-color: rgb(255, 255, 255);
+	border-radius: 50%;
+}
+.menu__lines,
+.menu__lines::before,
+.menu__lines::after {
+	position: absolute;
+	width: 2rem;
+	height: 4px;
+	background-color: rgb(119, 119, 119);
+	transition: 0.3s;
+}
+.menu__lines {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: transparent;
+}
+.menu__lines::before {
+	content: "";
+}
+.menu__lines::after {
+	content: "";
+	transform: rotate(90deg);
+}
+.menu__close_active .menu__lines::before {
+	transform: rotate(45deg);
+}
+.menu__close_active .menu__lines::after {
+	transform: rotate(-45deg);
+}

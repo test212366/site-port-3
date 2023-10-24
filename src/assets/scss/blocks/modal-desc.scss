@@ -1,0 +1,51 @@
+.modalDes__overflow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transition: opacity ease 0.3s;
+	background-color: rgba(0, 0, 0, 0.705);
+	z-index: 15;
+}
+.modalDes__window {
+	transform: translateY(-400px);
+	transition: transform ease 0.3s;
+	position: relative;
+	color: #000;
+	z-index: 16;
+	background-color: #fff;
+	height: 200px;
+	width: 300px;
+	margin: 0 auto;
+}
+.modalDes__window,
+.modalDes__overflow {
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1000;
+}
+.modalDes.open .modalDes__overflow,
+.modalDes.open .modalDes__window {
+	opacity: 1;
+	visibility: visible;
+	z-index: 15;
+}
+.modalDes.open .modalDes__window {
+	transform: translateY(100px);
+}
+.modalDes.open .modalDes__overflow {
+	opacity: 1;
+}
+.modalDes.hide .modalDes__overflow,
+.modalDes.hide .modalDes__window {
+	opacity: 1;
+	visibility: visible;
+	z-index: 15;
+}
+.modalDes.hide .modalDes__window {
+	transform: translateY(-400px);
+}
+.modalDes.hide .modalDes__overflow {
+	opacity: 0;
+}

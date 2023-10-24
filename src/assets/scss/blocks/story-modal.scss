@@ -1,0 +1,51 @@
+.modal__stories-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transition: opacity ease 0.3s;
+	background-color: rgba(0, 0, 0, 0.705);
+	z-index: 15;
+}
+.modal__stories-window {
+	transform: translateY(-400px);
+	transition: transform ease 0.3s;
+	position: relative;
+	color: #000;
+	z-index: 16;
+	background-color: #fff;
+	height: 200px;
+	width: 300px;
+	margin: 0 auto;
+}
+.modal__stories-window,
+.modal__stories-overlay {
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1000;
+}
+.modal__stories.open .modal__stories-overlay,
+.modal__stories.open .modal__stories-window {
+	opacity: 1;
+	visibility: visible;
+	z-index: 15;
+}
+.modal__stories.open .modal__stories-window {
+	transform: translateY(100px);
+}
+.modal__stories.open .modal__stories-overlay {
+	opacity: 1;
+}
+.modal__stories.hide .modal__stories-overlay,
+.modal__stories.hide .modal__stories-window {
+	opacity: 1;
+	visibility: visible;
+	z-index: 15;
+}
+.modal__stories.hide .modal__stories-window {
+	transform: translateY(-400px);
+}
+.modal__stories.hide .modal__stories-overlay {
+	opacity: 0;
+}

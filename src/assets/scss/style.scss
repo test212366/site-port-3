@@ -1,0 +1,41 @@
+@import "./vendor/reset.scss";
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	
+	background-color: rgb(255, 255, 255);
+	overflow-x: hidden;
+	font-size: 21px;
+	color: white;
+}
+body.remove-scroll {
+	overflow: hidden;
+}
+body::-webkit-scrollbar {
+	width: 7px;
+}
+body::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: rgb(148, 148, 148);
+	border-radius: 10px;
+}
+@import "./blocks/paralax.scss";
+@import "./blocks/stories.scss";
+@import "./blocks/page.scss";
+@import "./blocks/desctip.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/seacrh.scss";
+@import "./blocks/tabs.scss";
+@import "./blocks/modal-desc.scss";
+@import "./blocks/story-modal.scss";
